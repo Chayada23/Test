@@ -1,8 +1,6 @@
 package com.example.crud;
 
-@Repository 
+@Repository
 public class StudentRepository {
-pulic interface UserRepository extend JpaRepository<User , Long>{
-	
-}
+
 }

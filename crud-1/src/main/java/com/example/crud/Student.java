@@ -1,25 +1,41 @@
-package com.example.crud;
+	package com.example.crud;
+	import jakarta.persistence.Column;
+	import jakarta.persistence.Entity;
+	import jakarta.persistence.GeneratedValue;
+	import jakarta.persistence.GenerationType;
+	import jakarta.persistence.Id;
+	import jakarta.persistence.Table;
+	import lombok.Data;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-import lombok.Data;
-@Data
-@Entity
-@Table(name = "Student")
 public class Student {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-private Long id;
-	@Column(name = "first_name",nullable = false)
-	private String firstName;
 	
-	@Column(name = "last_name",nullable = false)
-	private String lastName;
+
 	
-	@Column(name = "email",nullable = false, unique = true)
-	private String email;
+
+	@Data
+	@Entity
+	@Table(name="students")
+	public class Account {
+
+		@Id
+		@GeneratedValue(strategy = GenerationType.IDENTITY)
+		private Long id ; 
+		
+		@Column(name="eng_name",nullable = false)
+		private String eng_name;
+		
+		@Column(name="faculty",nullable = false)
+		private String faculty;
+		
+		@Column(name="type",nullable = false)
+		private String type;
+		
+		
+		@Column(name = "user_name", nullable = false)
+		private String userName ; 
+		
+		
+			}
+
 }
+
